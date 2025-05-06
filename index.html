@@ -28,6 +28,8 @@
       align-items: center;
       text-align: center;
       transition: all 0.8s ease-in-out;
+      position: relative;
+      overflow: hidden;
     }
     .section:nth-child(even) {
       background: #1DB954;
@@ -52,12 +54,42 @@
       text-align: center;
       font-size: 14px;
     }
+
+    .floating-icon {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      opacity: 0.5;
+      animation: float 10s infinite linear;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+      }
+    }
   </style>
 </head>
 <body>
   <div class="section">
-    <h1>Gi & [Nome da Amiga] Wrapped 2024</h1>
-    <p>Uma retrospectiva cheia de memórias incríveis!</p>
+    <h1>Happy Birthday!</h1>
+    <p>Sua amiga te ama tanto que fez um wrapped com os melhores momentos dos seus 23 anos!</p>
+
+    <!-- Música de fundo -->
+    <audio autoplay loop>
+      <source src="https://dl.sndup.net/8spm/Charli%20XCX%20-%20360.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio embutido.
+    </audio>
+
+    <!-- Elementos animados no fundo -->
+    <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="floating-icon" style="left: 10%; animation-delay: 0s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="floating-icon" style="left: 30%; animation-delay: 2s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" class="floating-icon" style="left: 50%; animation-delay: 4s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="floating-icon" style="left: 70%; animation-delay: 6s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="floating-icon" style="left: 90%; animation-delay: 8s;">
   </div>
 
   <div class="section">
